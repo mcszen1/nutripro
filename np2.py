@@ -4,6 +4,8 @@ import os
 import io
 from docx import Document
 from docx.shared import Pt
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+import re
 
 # ========== CONFIGURAÇÃO DA API ==========
 api_key_env = os.getenv("OPENAI_API_KEY")
@@ -141,7 +143,8 @@ Dicas adicionais
 Refeições pré-treino leves e ricas em carbo; priorizar proteína de digestão fácil no pós
 
 
-Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em performance. Formate sua resposta em Markdown
+
+Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em performance.
 """
 
     with st.spinner("Gerando sua receita com IA... 🍳"):
@@ -163,10 +166,52 @@ Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em perfo
     # ========== GERAR RELATÓRIO EM .DOCX ==========
     doc = Document()
     doc.add_heading("Receita NutriChef Pro", level=1)
+
     for linha in resposta.split("\n"):
-        if linha.strip():
-            paragrafo = doc.add_paragraph()
-            paragrafo.add_run(linha.strip()).font.size = Pt(11)
+    	linha = linha.strip()
+    	if not linha:
+        	continue
+    	 # Títulos estilo markdown
+    	if linha.startswith("# "):
+        	doc.add_heading(linha[2:].strip(), level=1)
+    	elif linha.startswith("## "):
+        	doc.add_heading(linha[3:].strip(), level=2)
+    	elif linha.startswith("### "):
+        	doc.add_heading(linha[4:].strip(), level=3)
+    	elif linha.startswith("#### "):
+        	doc.add_paragraph(linha[5:].strip(), style="Heading 4")
+
+    	# Lista com bullet
+    	elif linha.startswith("- "):
+        	doc.add_paragraph(linha[2:].strip(), style="List Bullet")
+
+	# Lista numerada (com ou sem markdown)
+    	elif re.match(r"^\d+\.\s", linha):
+        	match = re.match(r"^(\d+\.)\s(.+)", linha)
+        	if match:
+            		numero, texto = match.groups()
+            		p = doc.add_paragraph(style="List Number")
+            		if "**" in texto:
+                		partes = re.split(r"(\*\*.*?\*\*)", texto)
+                		for parte in partes:
+                    			run = p.add_run(parte.strip("**"))
+                    			if parte.startswith("**") and parte.endswith("**"):
+                        			run.bold = True
+            		else:
+                		p.add_run(texto)
+        	else:
+            		doc.add_paragraph(linha, style="List Number")
+
+    # Negrito simples
+    	elif linha.startswith("**") and linha.endswith("**"):
+       		p = doc.add_paragraph()
+        	run = p.add_run(linha.strip("**"))
+        	run.bold = True
+
+    # Texto normal
+    	else:
+    		doc.add_paragraph(linha, style="Normal")
+
 
     buffer = io.BytesIO()
     doc.save(buffer)
