@@ -52,7 +52,7 @@ if enviar:
 
     prompt = f"""
 Você é um nutricionista esportivo especializado em alimentação de performance.
-Gere uma receita simples e prática com base nas informações abaixo:
+Gere três opções de receitas, simples e práticas com base nas informações abaixo:
 
 Usuário: {nome or 'Usuário'}
 Objetivo: {objetivo}
