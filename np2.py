@@ -74,6 +74,73 @@ Formato da resposta:
 6. Macros estimados (proteína, carboidrato, gordura, calorias)
 7. Dica extra (se solicitado)
 
+Dependendo do caso, se for pertinente, considere a tabela base a seguir :
+
+Formato: Tabela base (pode ser implementado em CSV, Google Sheets, Notion ou banco vetorizado)
+
+1. OBJETIVO: HIPERTROFIA (BULKING)
+Categoria
+Conteúdo
+Macros recomendados
+2.0–2.5g/kg proteína • 4–6g/kg carbo • 1g/kg gordura (valores médios)
+Proteínas preferidas
+Frango, patinho, ovos, whey, tilápia, tofu firme, grão-de-bico, lentilha
+Carboidratos chave
+Arroz branco/integral, batata doce, mandioca, aveia, macarrão integral
+Gorduras boas
+Azeite, pasta de amendoim, abacate, castanha, óleo de coco
+Receitas base
+Omelete monstro, Bowl hiperproteico, Arroz bomba com frango
+Suplementos sugeridos
+Whey, creatina, maltodextrina ou palatinose
+Duração média de preparo
+15–25 minutos
+Dicas adicionais
+Fracionar carbo alto ao redor do treino; sempre incluir 1 fonte de gordura boa na refeição principal
+
+
+2. OBJETIVO: CUTTING (DEFINIÇÃO / SECAR)
+Categoria
+Conteúdo
+Macros recomendados
+2.2–2.8g/kg proteína • 2–3g/kg carbo • 0.8g/kg gordura
+Proteínas preferidas
+Peito de frango, claras, tilápia, tofu firme, proteína vegetal isolada
+Carboidratos chave
+Abobrinha, couve-flor, arroz de couve-flor, batata doce, arroz integral
+Gorduras boas
+Azeite (quantidade controlada), linhaça, chia, óleo de coco
+Receitas base
+Panqueca de claras com aveia, Bowl seco de frango com legumes assados
+Suplementos sugeridos
+Whey isolado, cafeína, termogênicos (quando aplicável)
+Duração média de preparo
+10–20 minutos
+Dicas adicionais
+Evitar combo de gordura + carbo alto na mesma refeição; foco em saciedade e baixo volume calórico
+
+
+3. OBJETIVO: ENDURANCE (CORRIDA, TRIATLO, ETC.)
+Categoria
+Conteúdo
+Macros recomendados
+1.6–2.2g/kg proteína • 5–7g/kg carbo • 1g/kg gordura
+Proteínas preferidas
+Frango, peixe, ovos, lentilha, tofu
+Carboidratos chave
+Batata inglesa, arroz branco, frutas secas, aveia, banana, mel, pão
+Gorduras boas
+Sementes, azeite, pasta de amendoim (quantidade moderada)
+Receitas base
+Mingau de aveia com whey, Pasta integral com frango e abobrinha
+Suplementos sugeridos
+Isotônicos, palatinose, BCAA, whey
+Duração média de preparo
+10–30 minutos (dependendo da refeição pré ou pós treino)
+Dicas adicionais
+Refeições pré-treino leves e ricas em carbo; priorizar proteína de digestão fácil no pós
+
+
 Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em performance.
 """
 
