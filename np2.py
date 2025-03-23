@@ -141,7 +141,7 @@ Dicas adicionais
 Refeições pré-treino leves e ricas em carbo; priorizar proteína de digestão fácil no pós
 
 
-Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em performance.
+Seja simples, direto e prático. Use alimentos comuns no Brasil e foque em performance. Formate sua resposta em Markdown
 """
 
     with st.spinner("Gerando sua receita com IA... 🍳"):
